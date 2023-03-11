@@ -1,0 +1,21 @@
+input {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+}
+
+.accordion {
+    margin: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.accordion_item {
+   
+
+}
+
+/* .tab1,
+.tab2 {
+    border-top: 3px solid rgb(231, 221, 221);
+} */
