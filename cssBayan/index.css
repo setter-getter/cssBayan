@@ -1,0 +1,100 @@
+input {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+}
+
+.accordion {
+    height: 100vh;
+    max-width: 960px;
+    margin: 1rem auto;
+    overflow: hidden;
+}
+
+h1 {
+    cursor: pointer;
+}
+
+.accordion_item-1,
+.accordion_item-2,
+.accordion_item-3,
+.accordion_item-4 {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.accordion-label {
+    display: flex;
+    border-top: 2px double rgb(216, 213, 213);
+    padding: 1em;
+    font-size: large;
+    font-weight: bold;
+    cursor: pointer;
+    color: #17209c;
+}
+
+
+.accordion-content-1,
+.accordion-content-2,
+.accordion-content-3,
+.accordion-content-4 {
+    max-height: 0;
+    padding: 0 1em;
+    background: white;
+    transition: all 1s;
+}
+
+input:hover~.accordion-content-1,
+input:hover~.accordion-content-2,
+input:hover~.accordion-content-3,
+input:hover~.accordion-content-4 {
+    max-height: 100vh;
+    padding: 1em;
+}
+
+
+.accordion:hover+.ccordion-content-2 {
+    color: black;
+}
+
+input:checked~.accordion-content-1,
+input:checked~.accordion-content-2,
+input:checked~.accordion-content-3,
+input:checked~.accordion-content-4 {
+    max-height: 100vh;
+    padding: 1em;
+}
+
+input:checked~.accordion-label {
+    color: black;
+}
+
+img {
+    width: 300px;
+}
+
+.accordion-icon-1 {
+    display: block;
+    margin-left: auto;
+}
+
+.accordion-icon-2 {
+    display: none;
+}
+
+input:checked~.accordion-label .accordion-icon-1,
+input:hover~.accordion-label .accordion-icon-1 {
+    display: none;
+}
+
+input:checked~.accordion-label .accordion-icon-2,
+input:hover~.accordion-label .accordion-icon-2 {
+    display: block;
+    margin-left: auto;
+}
+
+.accordion:hover .accordion-label {
+    color: black;
+    background: rgb(243, 242, 242);
+}
